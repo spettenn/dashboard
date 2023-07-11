@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const Container = styled.div`
 	display: flex;
@@ -10,6 +10,7 @@ const Container = styled.div`
 	background-color: transparent;
 	width: 100%;
 	max-width: 150px;
+	box-shadow: 1px 0px 3px 1px rgba(0, 0, 0, 0.25);
 `;
 const Ul = styled.ul`
 	list-style: none;
@@ -22,7 +23,7 @@ const Ul = styled.ul`
 	padding: 0;
 	margin: 0;
 `;
-const StyledNavLink = styled(Link)`
+const StyledNavLink = styled(NavLink)`
 	color: white;
 	text-decoration: none;
 	&.active {
@@ -44,30 +45,27 @@ function Navigation() {
 		<Container>
 			<Ul>
 				<Li>
-					<StyledNavLink
-						to='../pages/Homepage.js'
-						exact
-						activeClassName='active'>
+					<StyledNavLink to='/' className='active'>
 						Home
 					</StyledNavLink>
 				</Li>
 				<Li>
-					<StyledNavLink to='../pages/Calendar.js' activeClassName='active'>
+					<StyledNavLink to='/calendar' className='active'>
 						Calendar
 					</StyledNavLink>
 				</Li>
 				<Li>
-					<StyledNavLink to='../pages/Pw.js' activeClassName='active'>
+					<StyledNavLink to='/pws' className='active'>
 						PWs
 					</StyledNavLink>
 				</Li>
 				<Li>
-					<StyledNavLink to='../pages/Assets.js' activeClassName='active'>
+					<StyledNavLink to='/assets' className='active'>
 						Assets
 					</StyledNavLink>
 				</Li>
 				<Li>
-					<StyledNavLink to='../pages/Notes' activeClassName='active'>
+					<StyledNavLink to='/notes' className='active'>
 						Notes
 					</StyledNavLink>
 				</Li>

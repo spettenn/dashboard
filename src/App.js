@@ -12,20 +12,19 @@ import Navigation from './components/Navigation';
 
 const App = () => {
 	return (
-		<>
-			<Router>
+		<Router>
+			<div style={{ display: 'flex' }}>
 				<Navigation />
-
 				<Routes>
-					<Route path='/yes' element={<HomePage />} />
+					<Route path='/' element={<HomePage />} />
 					<Route path='/login' element={<Login />} />
 					<Route path='/assets' element={<Assets />} />
 					<Route path='/calendar' element={<Calendar />} />
 					<Route path='/pws' element={<Pw />} />
 					<Route path='/notes' element={<Notes />} />
 				</Routes>
-			</Router>
-		</>
+			</div>
+		</Router>
 	);
 };
 

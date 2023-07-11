@@ -28,3 +28,16 @@ body {
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px); /* for Safari compatibility */
 }
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.navigation-container {
+  flex: 1;
+}
+
+.route-container {
+  flex: 4;
+}
