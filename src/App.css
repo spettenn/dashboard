@@ -1,37 +1,30 @@
-
 * {
   border: none;
-  background-color: transparent;
-}
-html {
-  height: 100%;
-  width: 100%;
-
-  background-color: transparent;
 }
 
-body {
-  color: #fff;
-  background-color: transparent;
-  font-family: "Poppins", sans-serif;
-  font-size: 1rem;
-  line-height: 1.5;
+body, html {
+  background: transparent;
   margin: 0;
   padding: 0;
   height: 100%;
   width: 100%;
 }
+
+
 #root {
-  height: 100%;
-  width: 100%;
-  background-color: rgba(16, 18, 27, 0.4); /* or var(--bg-dark) */
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(255, 255, 255, 0.1); 
   backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px); /* for Safari compatibility */
+  -webkit-backdrop-filter: blur(10px);
 }
+
+
 .app-container {
   display: flex;
   flex-direction: column;
   height: 100vh;
+  background-color: rgba(255, 255, 255, 0.6);
 }
 
 .navigation-container {

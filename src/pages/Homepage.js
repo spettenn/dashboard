@@ -7,14 +7,15 @@ const Container = styled.div`
 	justify-content: center;
 	align-items: center;
 	height: 100vh;
+	width: 100%;
 	background-color: transparent;
+	text-align: center;
 `;
 
 const HomePage = () => {
 	return (
 		<Container>
 			<h1>Home Page</h1>
-			<h2>Hello there</h2>
 		</Container>
 	);
 };

@@ -10,7 +10,11 @@ const Container = styled.div`
 	background-color: transparent;
 	width: 100%;
 	max-width: 150px;
-	box-shadow: 1px 0px 3px 1px rgba(0, 0, 0, 0.25);
+
+	background: rgba(0, 0, 0, 0.22);
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(7.4px);
+	-webkit-backdrop-filter: blur(7.4px);
 `;
 const Ul = styled.ul`
 	list-style: none;
@@ -24,7 +28,7 @@ const Ul = styled.ul`
 	margin: 0;
 `;
 const StyledNavLink = styled(NavLink)`
-	color: white;
+	color: white !important;
 	text-decoration: none;
 	&.active {
 		color: blue;
@@ -37,7 +41,7 @@ const Li = styled.li`
 	align-items: center;
 	height: 100%;
 	width: 100%;
-	background-color: #007bff;
+	background-color: transparent;
 `;
 
 function Navigation() {
