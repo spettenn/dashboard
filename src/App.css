@@ -1,7 +1,6 @@
 * {
   border: none;
 }
-
 body, html {
   background: transparent;
   margin: 0;
@@ -9,22 +8,26 @@ body, html {
   height: 100%;
   width: 100%;
 }
-
-
+::root {
+  --btn-color: #fff;
+  --btn-bg: #0077ff;
+  --text-color: #000;
+  --main-bg-color: #fff;
+}
 #root {
   height: 100vh;
   width: 100vw;
-  background-color: rgba(255, 255, 255, 0.1); 
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+background: rgba(255, 201, 201, 0.22);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(7.4px);
+-webkit-backdrop-filter: blur(7.4px);
 }
-
-
 .app-container {
   display: flex;
   flex-direction: column;
   height: 100vh;
-  background-color: rgba(255, 255, 255, 0.6);
+  
 }
 
 .navigation-container {

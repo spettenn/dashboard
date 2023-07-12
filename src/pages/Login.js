@@ -1,4 +1,5 @@
-import React, { useState, useHistory } from 'react';
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom'; // replace useHistory with useNavigate
 import styled from 'styled-components';
 
 const PageContainer = styled.div`
@@ -35,7 +36,7 @@ const Button = styled.button`
 	padding: 10px 20px;
 	border: none;
 	border-radius: 5px;
-	background-color: #007bff;
+	background-color: #0077ff;
 	color: #fff;
 	font-size: 16px;
 	cursor: pointer;
@@ -47,7 +48,10 @@ const Button = styled.button`
 
 const Login = () => {
 	const [password, setPassword] = useState('');
-	const history = useHistory(); // add this line
+	const navigate = useNavigate(); // replace useHistory with useNavigate
+
+	// This is your hardcoded password for simple authentication
+	const correctPassword = 'yeppers123'; // replace "yourpassword" with your own password
 
 	const handleSubmit = (event) => {
 		event.preventDefault();
@@ -56,8 +60,16 @@ const Login = () => {
 			alert('Password should be at least 6 digits long');
 			return;
 		}
-		// On successful login, redirect to the homepage
-		history.push('/');
+
+		// Check if the entered password is correct
+		if (password !== correctPassword) {
+			alert('Incorrect password');
+			return;
+		}
+
+		// Simulate successful login
+		localStorage.setItem('isAuthenticated', 'true');
+		navigate('/'); // replace history.push with navigate
 	};
 
 	// handle login
