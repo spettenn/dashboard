@@ -14,7 +14,6 @@ const FormContainer = styled.form`
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-
 	border: 1px solid #03e9f4;
 	border-radius: 5px;
 	background-color: transparent;
@@ -30,6 +29,7 @@ const Input = styled.input`
 	border: 1px solid #03e9f4;
 	border-radius: 5px;
 	font-size: 16px;
+	background-color: transparent;
 `;
 
 const Login = () => {

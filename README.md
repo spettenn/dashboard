@@ -21,3 +21,9 @@ RUNN APP:
 check if app is running: npm start ->
 
 npm run electron-start
+
+## 4
+
+run backend:
+
+node server.js

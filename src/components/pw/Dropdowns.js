@@ -9,7 +9,7 @@ const Container = styled.div`
 	height: 100%;
 	width: 100%;
 	background-color: transparent;
-	max-height: 60vh;
+
 	overflow-y: auto;
 `;
 
@@ -41,11 +41,13 @@ const DropdownButton = styled.button`
 	color: white;
 	border: none;
 	cursor: pointer;
-	padding: 16px;
-	font-size: 18px;
+	padding: 10px 30px;
+	font-size: 25px;
+	min-width: 500px;
 
 	margin-bottom: 10px;
-	min-width: 300px;
+	border-radius: 5px;
+	border: 1px solid #03e9f4;
 	background: rgba(0, 0, 0, 0.22);
 	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 	backdrop-filter: blur(7.4px);
@@ -61,9 +63,10 @@ const Span = styled.span`
 
 const DropdownItem = styled.p`
 	color: black;
-	padding: 12px 16px;
+
 	text-decoration: none;
 	display: block;
+	min-width: 500px;
 `;
 const InnerContainer = styled.div`
 	display: flex;

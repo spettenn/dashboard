@@ -16,7 +16,6 @@ const Container = styled.div`
 function Pw() {
 	return (
 		<Container>
-			<h1>PWs</h1>
 			<Dropdowns />
 		</Container>
 	);
