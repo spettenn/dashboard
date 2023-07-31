@@ -10,9 +10,11 @@ function createWindow() {
 		backgroundColor: 'transparent',
 		transparent: true,
 		frame: false,
-
 		webPreferences: {
-			nodeIntegration: true,
+			nodeIntegration: false,
+			worldSafeExecuteJavaScript: true,
+			contextIsolation: true,
+			preload: path.join(__dirname, 'preload.js'), // Add your preload file here
 		},
 	});
 
@@ -23,14 +25,13 @@ function createWindow() {
 	win.loadURL(startURL);
 
 	// After window is loaded
-	win.webContents.on('did-finish-load', () => {
+	/* 	win.webContents.on('did-finish-load', () => {
 		win.webContents.insertCSS(`
 		  body {
-			background: rgba(255, 255, 255, 0.7);
-			backdrop-filter: blur(10px);
+			background: red !important;
 		  }
 		`);
-	});
+	}); */
 }
 
 app.whenReady().then(createWindow);

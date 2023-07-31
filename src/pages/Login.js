@@ -7,43 +7,29 @@ const PageContainer = styled.div`
 	justify-content: center;
 	align-items: center;
 	height: 100vh;
-	background-color: #fafafa;
+	width: 100vw;
 `;
 
-const FormContainer = styled.div`
+const FormContainer = styled.form`
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	padding: 20px;
-	border: 1px solid #ddd;
-	border-radius: 5px;
-	background-color: #fff;
-`;
 
-const Title = styled.h1`
-	margin-bottom: 20px;
+	border: 1px solid #03e9f4;
+	border-radius: 5px;
+	background-color: transparent;
+	outline: #03e9f4;
+
+	&focus {
+		outline: #03e9f4;
+	}
 `;
 
 const Input = styled.input`
-	margin-bottom: 10px;
 	padding: 10px;
-	border: 1px solid #ddd;
+	border: 1px solid #03e9f4;
 	border-radius: 5px;
 	font-size: 16px;
-`;
-
-const Button = styled.button`
-	padding: 10px 20px;
-	border: none;
-	border-radius: 5px;
-	background-color: #0077ff;
-	color: #fff;
-	font-size: 16px;
-	cursor: pointer;
-
-	&:disabled {
-		background-color: #ccc;
-	}
 `;
 
 const Login = () => {
@@ -78,14 +64,13 @@ const Login = () => {
 	return (
 		<PageContainer>
 			<FormContainer onSubmit={handleSubmit}>
-				<Title>Login</Title>
 				<Input
 					type='password'
 					value={password}
 					onChange={(e) => setPassword(e.target.value)}
-					placeholder='Enter your password'
+					placeholder=''
 				/>
-				<Button type='submit'>Login</Button>
+				{/* <Button type='submit'>Login</Button> */}
 			</FormContainer>
 		</PageContainer>
 	);
