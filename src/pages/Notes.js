@@ -1,5 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
+import NotesMain from '../components/notes/NotesMain';
+
 const Container = styled.div`
 	display: flex;
 	justify-content: center;
@@ -10,7 +12,7 @@ const Container = styled.div`
 function Notes() {
 	return (
 		<Container>
-			<h1>Notes</h1>
+			<NotesMain />
 		</Container>
 	);
 }

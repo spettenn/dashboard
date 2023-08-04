@@ -4,7 +4,7 @@ import styled from 'styled-components';
 /* import fetchVg from '../components/scraper/scrapeVg'; */
 import Clock from '../components/dashboard/Clock';
 import Weather from '../components/dashboard/Weather';
-import CryptoTable from '../components/dashboard/Crypto';
+/* import CryptoTable from '../components/dashboard/Crypto'; */
 
 const Container = styled.div`
 	display: flex;
@@ -38,7 +38,7 @@ const HomePage = () => {
 			<Clock />
 			<Weather />
 			<h1>Home Page</h1>
-			<CryptoTable />
+			{/* <CryptoTable /> */}
 			{/* {headlines &&
 				headlines.map((headline, index) => <p key={index}>{headline}</p>)} */}
 		</Container>
