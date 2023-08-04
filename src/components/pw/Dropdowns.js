@@ -24,7 +24,7 @@ const DropdownContent = styled.div`
 	min-width: 160px;
 	z-index: 1;
 
-	background: rgba(0, 0, 0, 0.22);
+	background-color: #383838;
 
 	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 	backdrop-filter: blur(7.4px);
@@ -34,6 +34,10 @@ const DropdownContent = styled.div`
 	margin-top: -10px;
 	border-bottom-left-radius: 5px;
 	border-bottom-right-radius: 5px;
+	border-bottom: 1px solid #03e9f4;
+	border-left: 1px solid #03e9f4;
+	border-right: 1px solid #03e9f4;
+	text-align: center;
 `;
 
 const DropdownButton = styled.button`
@@ -57,7 +61,7 @@ const DropdownButton = styled.button`
 const Span = styled.span`
 	font-size: 16px;
 	margin-left: 10px;
-	color: green;
+	color: white;
 	cursor: pointer;
 `;
 

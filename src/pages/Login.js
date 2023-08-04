@@ -43,13 +43,13 @@ const Login = () => {
 		event.preventDefault();
 		// Validate password length
 		if (password.length < 6) {
-			alert('Password should be at least 6 digits long');
+			alert('Fucking idiot, you need more digits');
 			return;
 		}
 
 		// Check if the entered password is correct
 		if (password !== correctPassword) {
-			alert('Incorrect password');
+			alert('Incorrect pw nerd');
 			return;
 		}
 
