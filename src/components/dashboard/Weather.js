@@ -26,6 +26,11 @@ const Span = styled.span`
 	color: #03e9f4;
 	margin-left: 0.5rem;
 `;
+const WeatherIcon = styled.div`
+	font-size: 2rem;
+	color: #03e9f4;
+	margin-left: 1rem;
+`;
 
 const Weather = () => {
 	const [weatherData, setWeatherData] = useState(null);
@@ -59,13 +64,29 @@ const Weather = () => {
 		if (!weatherData) return null;
 		switch (weatherData.current.condition.text) {
 			case 'Sunny':
-				return <FaSun />;
+				return (
+					<WeatherIcon style={{ color: 'yellow' }}>
+						<FaSun />
+					</WeatherIcon>
+				);
 			case 'Rain':
-				return <FaCloudRain />;
+				return (
+					<WeatherIcon style={{ color: 'gray' }}>
+						<FaCloudRain />
+					</WeatherIcon>
+				);
 			case 'Cloudy':
-				return <FaCloud />;
+				return (
+					<WeatherIcon style={{ color: 'gray' }}>
+						<FaCloud />
+					</WeatherIcon>
+				);
 			case 'Snow':
-				return <FaSnowflake />;
+				return (
+					<WeatherIcon style={{ color: 'white' }}>
+						<FaSnowflake />
+					</WeatherIcon>
+				);
 			default:
 				return null;
 		}

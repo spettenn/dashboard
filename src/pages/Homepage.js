@@ -1,10 +1,8 @@
-// HomePage.js
 import React from 'react';
 import styled from 'styled-components';
-/* import fetchVg from '../components/scraper/scrapeVg'; */
 import Clock from '../components/dashboard/Clock';
 import Weather from '../components/dashboard/Weather';
-/* import CryptoTable from '../components/dashboard/Crypto'; */
+import Me from '../assets/me.png';
 
 const Container = styled.div`
 	display: flex;
@@ -16,31 +14,51 @@ const Container = styled.div`
 	text-align: center;
 `;
 
+const Image = styled.img`
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: auto;
+	border-radius: 50%;
+	max-width: 300px;
+	z-index: 2;
+	transition: transform 0.5s;
+	backface-visibility: hidden;
+`;
+
+const ImageWrapper = styled.div`
+	position: relative;
+	width: 300px;
+	height: 300px;
+	border-radius: 50%;
+	overflow: hidden;
+
+	&:hover ${Image} {
+		transform: rotateY(180deg);
+	}
+`;
+
+const BehindText = styled.div`
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 20px;
+	z-index: 1;
+	color: white;
+	text-align: center;
+`;
+
 const HomePage = () => {
-	/* const [headlines, setHeadlines] = useState([]); */
-
-	/* 	useEffect(() => {
-		const fetchHeadlines = async () => {
-			try {
-				const response = await fetch('http://localhost:5000/fetchVg');
-				const data = await response.json();
-				setHeadlines(data);
-			} catch (error) {
-				console.log(error);
-			}
-		};
-
-		fetchHeadlines();
-	}, []); */
-
 	return (
 		<Container>
 			<Clock />
 			<Weather />
-			<h1>Home Page</h1>
-			{/* <CryptoTable /> */}
-			{/* {headlines &&
-				headlines.map((headline, index) => <p key={index}>{headline}</p>)} */}
+			<ImageWrapper>
+				<BehindText>Hello, I'm Aleks!</BehindText>
+				<Image src={Me} alt='me' />
+			</ImageWrapper>
 		</Container>
 	);
 };

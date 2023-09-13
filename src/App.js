@@ -16,7 +16,8 @@ import Navigation from './components/Navigation';
 import styled from 'styled-components';
 
 const TransparentBackground = styled.div`
-	background-color: #383838;
+	background-color: rgba(56, 56, 56, 0.7);
+	backdrop-filter: blur(5px);
 	width: 100%;
 	height: 100vh;
 `;
